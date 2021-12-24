@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script</title>
+</head>
+<body>
+    <h1>JavaScript Popup Tag</h1>
+    <p>This is the first javascript page</p>
+    <p id="para"></p>
+    <script>
+    document.getElementById("para").innerHTML="htmltag";
+    function validateForm()
+    {
+        let x=document.forms["Myform"]["fname"].value;
+        if(x=="")
+        {
+            alert("Please enter your name");
+            return false;
+        }
+       
+    }
+    </script>
+<form name="Myform" onsubmit="return validateForm()" method="post">
+    <table>
+        <tr>
+            <td><input type="text" placeholder="Name" value="name" name="fname"> </td>
+            <td>
+                <input type="submit" value="Submit" >
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

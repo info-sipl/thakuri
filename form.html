@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Form</title>
+</head>
+<body>
+    
+    <script>
+
+        function validateForm()
+        {
+          if(document.NewForm.fname.value=="")
+          {
+              document.getElementById('error').innerHTML="Please Enter your Name";
+              return false;
+          }
+          if(document.NewForm.email.value=="")
+          {
+              document.getElementById('error').innerHTML="Please Enter your Email";
+              return false;
+          }
+          if(document.NewForm.password.value=="")
+          {
+              document.getElementById('error').innerHTML="Please enter your password";
+              return false;
+          }
+          else
+          return true;
+            
+        }
+    </script>
+
+    <form name="NewForm" onsubmit="return validateForm()" method="post">
+        <table>
+            <tr>
+                <td> <label for="Name"> Name</label></td>
+                <td> <input type="text" placeholder="Enter Name" name="fname" ></td>
+                
+            </tr>
+            <tr>
+                <td> <label for="email"> Email</label></td>
+                <td> <input type="email" placeholder="Enter Email" name="email"></td>
+            </tr>
+            <tr>
+                <td> <label for="Password">Password</label></td>
+                <td> <input type="password" placeholder="Enter password" name="password"></td>
+            </tr>
+            <tr>
+                <td> <input type="Submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+    <div id="error" style="color:brown;font-family: 'Times New Roman', Times, serif;"></div>
+</body>
+</html>
